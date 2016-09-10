@@ -1,0 +1,57 @@
+    1  clear
+    2  mkdir LXS2_paulo
+    3  ls
+    4  pwd
+    5  cd LXS2_paulo/
+    6  ls
+    7  pwd
+    8  mkdir history
+    9  vim .gitignore
+   10  ls -a
+   11  ls
+   12  cd ..
+   13  tre
+   14  tree
+   15  sudo apt-get install tree
+   16  tree
+   17  cd LXS2_paulo/
+   18  mkdir src
+   19  mkdir misc
+   20  tree
+   21  touch history/file
+   22  touch msic/file
+   23  touch misc/file
+   24  touch src/file
+   25  tree
+   26  git init
+   27  tree
+   28  git config --global user.name "Paulo Henriquez"
+   29  git config --global user.email paulo.henriquez1990@gmail.com
+   30  history
+   31  ls
+   32  cat ../.gitconfig 
+   33  cd -
+   34  pwd
+   35  cd LXS2_paulo/
+   36  ls ..
+   37  pwd
+   38  ls ../..
+   39  ls ../../..
+   40  ls ../../
+   41  ls ../../../../
+   42  cat ../.gitconfig 
+   43  tree
+   44  git status
+   45  git add .gitignore
+   46  git status
+   47  touch misc/file2
+   48  tree
+   49  git status
+   50  git add misc/
+   51  git status
+   52  git add src/
+   53  git status
+   54  git add history/
+   55  git status
+   56  git commit -m "Inicio del arbol de desarrollo"
+   57  history > history/history-$HOSTNAME-`date +%Y%m%d`
