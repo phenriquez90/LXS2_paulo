@@ -1,0 +1,294 @@
+    1  df 'lh 
+    2  df -lh 
+    3  sudo shutdown -h now 
+    4  clear
+    5  ip addrr -4
+    6  ip -4 addrr
+    7  ip -4 addr
+    8  init 0
+    9  poweroff
+   10  shutdown -h
+   11  sudo shutdown -h now
+   12  clear
+   13  sudo usermod -a -G sudo sysadmin
+   14  sudo adduser user1
+   15  id user1
+   16  sudo usermod -a -G sudo user1
+   17  iduser1
+   18  id user1
+   19  su -user1
+   20  su - user1
+   21  ls
+   22  pw
+   23  pwd
+   24  ls
+   25  tree
+   26  ls
+   27  pwd
+   28  sudo apt-get install git
+   29  git clone https://github.com/phenriquez90/LXS2_paulo.git
+   30  ls
+   31  git
+   32  clear
+   33  tree
+   34  sudo apt-get install tree
+   35  clear
+   36  tree
+   37  man ip
+   38  clear
+   39  ls
+   40  pwd
+   41  cd ..
+   42  ls
+   43  tree
+   44  clear
+   45  ls
+   46  ls test
+   47  ls sysadmin/
+   48  ls sysadmin/ > output
+   49  sudo ls sysadmin/ > output
+   50  sudo ls sysadmin > output
+   51  sudo ls sysadmin > output.txt
+   52  sudo ls sysadmin > ./sysadmin/output.txt
+   53  ls
+   54  ls -l
+   55  ls -a
+   56  sysadmin ls
+   57  ls sysadmin
+   58* 
+   59* 
+   60  ls
+   61* 
+   62  cd ..
+   63  ls
+   64  cd sysadmin/
+   65  ls
+   66  ls test > error
+   67  ls test > ./error 
+   68  ls test 2> error 
+   69  ls
+   70  cat error 
+   71  ls test 2> error 
+   72  cat error 
+   73* 
+   74  cat error 
+   75  ls
+   76  cat output.txt 
+   77  cat error 
+   78  ls test 2> error 
+   79  cat error 
+   80  ls test 2>> error 
+   81  cat error 
+   82  ls test >> error 
+   83  cat error 
+   84  cowsay hello
+   85  sudo apt-get install cowsay
+   86  catsay helñlo
+   87  catsay hello
+   88  cowsay hello
+   89  ls
+   90  cd LXS2_paulo/
+   91  git status 
+   92  git config user.name "Paulo Henriquez"
+   93  git config user.email "paulo.henriquez1990@gmail.com"
+   94  git config --global user.name "Paulo Henriquez"
+   95  git config --global user.email "paulo.henriquez1990@gmail.com"
+   96  git log
+   97  cd..}
+   98  cd ..
+   99  clear
+  100  ls
+  101  pwd
+  102  tree
+  103  clear
+  104  git clone https://github.com/emvarg/LXS2_emmanuel.git
+  105  ls
+  106  cd LXS2_
+  107  cd LXS2_emmanuel/
+  108  tree
+  109  cd ..
+  110  ls
+  111  pwd
+  112  cd LXS2_emmanuel/
+  113  ls
+  114  tree
+  115  cp misc/dhcpd.conf /home/sysadmin/misc/
+  116  cp misc/dhcpd.conf /home/sysadmin/LXS2_paulo/misc/
+  117  cd ..
+  118  ls
+  119  cd LXS2_paulo/
+  120  cat misc/dhcpd.conf 
+  121  cd misc/
+  122  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10." | awk -F " " '{print $4}' | sort > red-blanca
+  123  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "192." | awk -F " " '{print $4}' | sort > red-azul
+  124  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163." | awk -F " " '{print $4}' | sort > red-verde
+  125  ls
+  126  mkdir clase3
+  127  ls
+  128  cp dhcpd.conf clase3/
+  129  cp red-azul clase3/
+  130  cp red-blanca clase3/
+  131  cp red-verde clase3/
+  132  ls
+  133  cd clase3/
+  134  ls
+  135  cd ..
+  136  rm red*
+  137  ls
+  138  rm dhcpd.conf 
+  139  ls
+  140  tree
+  141  cd clase3/
+  142  cat red-azul 
+  143  cat red-blanca
+  144  cat red-verde
+  145  tree
+  146  cat red-verde
+  147  cat dhcpd.conf 
+  148  cd ..
+  149  ls
+  150  cd clase3/
+  151  ls
+  152  cp dhcpd.conf ../
+  153  cd .
+  154  cd ..
+  155  ls
+  156  cat dhcpd.conf 
+  157  clear
+  158  tree
+  159  rm clase3/
+  160  rm -m clase3/
+  161  cd clase3/
+  162  rm dhcpd.conf 
+  163  rm red*
+  164  cd ..
+  165  ls
+  166  clear
+  167  tree
+  168  cat dhcpd.conf 
+  169  clear
+  170  cat dhcpd.conf | grep -v "#"
+  171  clear
+  172  cat dhcpd.conf | grep -v "#" | grep "fixed"
+  173  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10"
+  174  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10."
+  175  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "192."
+  176  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163."
+  177  clear
+  178  ls
+  179  cat dhcpd.conf 
+  180  clear
+  181  ls
+  182  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10."
+  183  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "192."
+  184  history
+  185  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163."
+  186  cat red-blanca 
+  187  ls
+  188  cat red-azul 
+  189  clear
+  190  cat red-azul 
+  191  cat red-verde 
+  192  clear
+  193  history
+  194  tree
+  195  rm red*
+  196  tree
+  197  history
+  198  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163." | awk -F " " '{print $4}'
+  199  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163." | awk -F " " '{print $1}'
+  200  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10." | awk -F " " '{print $2}'
+  201  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10." | awk -F " " '{print $2}' | sort > red-blanca
+  202  cat red-blanca 
+  203  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "192." | awk -F " " '{print $2}' | sort > red-azul
+  204  cat red-azul 
+  205  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163." | awk -F " " '{print $2}' | sort > red-verde
+  206  cat red-verde 
+  207  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163."
+  208  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "163"
+  209  cat dhcpd.conf | grep -v "#" | grep "fixed"
+  210  clear
+  211  ls
+  212  cat red-azul 
+  213  cat red-blanca 
+  214  cat red-verde 
+  215  cat dhcpd.conf | grep -v "#" | grep "fixed"
+  216  tree
+  217  cat red-azul 
+  218  ls
+  219  cat red-blanca 
+  220  history
+  221  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10.0" | awk -F " " '{print $2}' | sort > red-azul
+  222  cat red-azul 
+  223  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10.2" | awk -F " " '{print $2}' | sort > red-verde
+  224  cat red-verde 
+  225  clear
+  226  tree
+  227  history
+  228  cat dhcpd.conf | grep -v "#" | grep "fixed"
+  229  cat red-blanca 
+  230  cat red-azul
+  231  cat verde
+  232  cat red-verde 
+  233  history
+  234  cat dhcpd.conf | grep -v "#" | grep "fixed"
+  235  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "192." | awk -F " " '{print $2}' | sort > red-blanca
+  236  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10.0" | awk -F " " '{print $2}' | sort > red-azul
+  237  cat dhcpd.conf | grep -v "#" | grep "fixed" | grep "10.2" | awk -F " " '{print $2}' | sort > red-verde
+  238  cat red-blanca 
+  239  cat red-azul 
+  240  cat red-verde 
+  241  clear
+  242  tree
+  243  cp dhcpd.conf clase3/
+  244  cp red* clase3/
+  245  ls
+  246  rm red*
+  247  ls
+  248  cd clase3/
+  249  ks
+  250  ls
+  251  cat dhcpd.conf 
+  252  clear
+  253  ls
+  254  cat red-azul 
+  255  cat red-blanca 
+  256  clear
+  257  cat red-verde 
+  258  clear
+  259  tree
+  260  cd ..
+  261  ls
+  262  rm dhcpd.conf 
+  263  ls
+  264  cd clase3/
+  265  tree
+  266  clear
+  267  cd ..
+  268  git status
+  269  cd clase3/
+  270  git status 
+  271  clear
+  272  cd ..
+  273  git status
+  274  git add clase3/
+  275  git stau
+  276  git status
+  277  git commit -m "Practica clase3"
+  278  git loh
+  279  git log
+  280  clear
+  281  ls
+  282  clear
+  283  git push origin master
+  284  git logh
+  285  git log
+  286  history
+  287  clear
+  288  history
+  289  cd ..
+  290  tree
+  291  cd history/
+  292  cd ..
+  293  history > history/history-$HOSTNAME-´date +%Y%m%d´
+  294  history > history/history-$HOSTNAME-`date +%Y%m%d`
