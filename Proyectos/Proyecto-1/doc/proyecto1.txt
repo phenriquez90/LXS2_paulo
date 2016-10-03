@@ -1,0 +1,35 @@
+Lista de Comandos para Trabajo de Investigacion
+1. Luego de crear una nueva unidad virtual desde virtualbox que se identifica como sdb
+	Se agrega desde el menu "Settings" en virtualbox
+2. Hay que montar la unidad como LVM con el tamaño de 1GB.
+	Comandos:
+		- sudo fdisk /dev/sdb
+	NOTA: Seleccionar en el Menu la particion tipo "8e" para crearla como Linux LVM.
+3. Luego hay que extender el volume group predeterminado en centos que se llama "centos" con la nueva unidad(sdb).
+	Comandos: 
+		- vgextend centos /dev/sdb
+5. Como siguiente paso, se debe extender el volumen lógico de swap en unos 200MB.
+	Comandos:
+		- lvextend -L +200M /dev/centos/swap		
+		- lvextend -L +200M /dev/centos/root
+6. Finalmente se debe de aplicar  el comando para que la tabla de archivos pueda detectar el nuevo espacio agregado.
+	Comandos:
+		- resize2fs /dev/centos/swap
+	NOTA: Este comando no pudo ser aplicado en el SO.Lista de Comandos para Trabajo de Investigacion
+1. Luego de crear una nueva unidad virtual desde virtualbox que se identifica como sdb
+	Se agrega desde el menu "Settings" en virtualbox
+2. Hay que montar la unidad como LVM con el tamaño de 1GB.
+	Comandos:
+		- sudo fdisk /dev/sdb
+	NOTA: Seleccionar en el Menu la particion tipo "8e" para crearla como Linux LVM.
+3. Luego hay que extender el volume group predeterminado en centos que se llama "centos" con la nueva unidad(sdb).
+	Comandos: 
+		- vgextend centos /dev/sdb
+5. Como siguiente paso, se debe extender el volumen lógico de swap en unos 200MB.
+	Comandos:
+		- lvextend -L +200M /dev/centos/swap		
+		- lvextend -L +200M /dev/centos/root
+6. Finalmente se debe de aplicar  el comando para que la tabla de archivos pueda detectar el nuevo espacio agregado.
+	Comandos:
+		- resize2fs /dev/centos/swap
+	NOTA: Este comando no pudo ser aplicado en el SO.

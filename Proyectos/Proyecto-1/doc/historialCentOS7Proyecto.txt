@@ -1,0 +1,470 @@
+    1  clear
+    2  su yum update
+    3  sudo yum update
+    4  tree
+    5  clear
+    6  sudo yum ugrade
+    7  clear
+    8  yum install tree -y
+    9  sudo yum install tree -y
+   10  tree
+   11  clear
+   12  cd /
+   13  tree
+   14  clear
+   15  yum install vim
+   16  sudo yum install vim
+   17  clear
+   18  pwd
+   19  ls
+   20  cd home
+   21  ls
+   22  cd sysadmin/
+   23  ls
+   24  pwd
+   25  clear
+   26  cd /
+   27  ls
+   28  clear
+   29  pwd
+   30  clear
+   31  pvdisplay
+   32  sudo pvdisplay
+   33  clear
+   34  sudo pvdisplay
+   35  pvdisplay
+   36  sudo pvdisplay
+   37  vgdisplay
+   38  sudo vgdisplay
+   39  shutdown -h now
+   40  clear
+   41  history
+   42  clear
+   43  shutdown -h now
+   44  clear
+   45  fdisk -l
+   46  cd /
+   47  ls
+   48  fdisk -l
+   49  cd
+   50  cd /
+   51  clear
+   52  pwd
+   53  ls
+   54  ls -l
+   55  ls -l -a
+   56  clear
+   57  fdisk -l
+   58  clear
+   59  pwd
+   60  ls
+   61  fdisk man
+   62  man fdisk
+   63  ls
+   64  cd proc/
+   65  ls
+   66  fdisk
+   67  fdisk -l
+   68  cd mounts
+   69  mounts
+   70  man mounts
+   71  ls
+   72  partitions
+   73  cd partitions
+   74  cd ..
+   75  clear
+   76  ls
+   77  cd media/
+   78  ls
+   79  fdisk
+   80  fdisk -b
+   81  clear
+   82  ls
+   83  pwd
+   84  cd ..
+   85  clear
+   86  ls
+   87  cd dev/
+   88  ls
+   89  fdisk -l
+   90  fdisk
+   91  clear
+   92  ls
+   93  pvdisplay
+   94  sudo pvdisplay
+   95  vgdisplay
+   96  sudo vgdisplay
+   97  sudo vgdisplay -l
+   98  vgdisplay man
+   99  man vgdisplay
+  100  sudo vgdisplay -v
+  101  sudo vgdisplay -s
+  102  sudo vgdisplay -v
+  103  clear
+  104  cd /
+  105  ls
+  106  shutdown -h now
+  107  clear
+  108  cd /
+  109  clear
+  110  ls
+  111  cd dev
+  112  clear
+  113  fdisk -l
+  114  ls
+  115  cd mapper/
+  116  ls
+  117  cd /
+  118  fdisk -v
+  119  vgdisplay
+  120  sudo vgdisplay
+  121  display
+  122  sudo vgdisplay
+  123  sudo dvdisplay
+  124  sudo dgdisplay
+  125  clear
+  126  sudo vgdisplay
+  127  sudo pvdisplay
+  128  clear
+  129  resize2fs
+  130  clear
+  131  vgdisplay
+  132  sudo vgdisplay
+  133  sudo pvdisplay
+  134  sudo vgdisplay
+  135  sudo pvdisplay
+  136  man lvm
+  137  vgs
+  138  sudo vgs
+  139  clear
+  140  ls
+  141  cd dev/
+  142  ls
+  143  sudo vgdisplay
+  144  sudo pvdisplay
+  145  clear
+  146  ls
+  147  cd mapper/
+  148  ls
+  149  sudo pvdisplay
+  150  sudo vgdisplay
+  151  clear
+  152  ls
+  153  clear
+  154  cd ..
+  155  ls
+  156  clear
+  157  cd /
+  158  sudo pvdisplay
+  159  shutdown -h now
+  160  clear
+  161  cd /
+  162  ls
+  163  cd dev/
+  164  clear
+  165  ls
+  166  cd hdd
+  167  cd sda1
+  168  clear
+  169  cd mapper/
+  170  ls
+  171  clear
+  172  fdisk -l
+  173  cd ..
+  174  ls
+  175  sudo pvdisplay
+  176  sudo vgdisplay
+  177  clear
+  178  fdisk
+  179  fdisk -s
+  180  clear
+  181  ls
+  182  sudo lvdisplay
+  183  fdisk -l
+  184  clear
+  185  sudo vgdisplay
+  186  sudo pvdisplay
+  187  fdisk hdd
+  188  fdisk sda2
+  189  lvdisplay
+  190  sudo lvdisplay
+  191  cd ..
+  192  ls
+  193  sudo lvdisplay > /tmp/lv-original
+  194  cd tmp/
+  195  ls
+  196  cat lv-original 
+  197  cd /
+  198  sudo vgdisplay > /tmp/vg-original
+  199  sudo pvdisplay > /tmp/pv-original
+  200  pvcreate /dev/sdb1
+  201  sudo pvcreate /dev/sdb1
+  202  sudo pvcreate /dev/sdba2
+  203  sudo pvcreate /dev/hdd
+  204  cd dev/
+  205  ls
+  206  sudo pvcreate /dev/sda1
+  207  sudo pvcreate /dev/sda2
+  208  sudo pvcreate -ff /dev/sda2
+  209  sudo pvcreate  /dev/sda
+  210  sudo pvcreate  /dev/sda1
+  211  sudo pvcreate  /dev/sda2
+  212  sudo pvcreate  /dev/sdb
+  213  fdisk -l
+  214  sudo vgcreate vg0 /dev/sdb
+  215  vgextend vg0 /dev/sdb
+  216  sudo vgextend vg0 /dev/sdb
+  217  sudo pvcreate /dev/sda3
+  218  sudo pvcreate /dev/hdd
+  219  sudo pvcreate /dev/sd1
+  220  sudo pvcreate /dev/sd2
+  221  sudo pvcreate /dev/sda2
+  222  sudo pvcreate /dev/sda3
+  223  sudo pvcreate /dev/sda4
+  224  fdisk -l
+  225  ls
+  226  shutdown -h now
+  227  clear
+  228  df -h
+  229  fdisk -l
+  230  sudo fdisk -l
+  231  cd /
+  232  sudo fdisk /dev/sdb
+  233  clear
+  234  pvdisplay
+  235  sudo pvdisplay
+  236  sudo vgdisplay
+  237  ls
+  238  cd tmp/
+  239  ls
+  240  clear
+  241  fdisk
+  242  fdisk -l
+  243  sudo fdisk -l
+  244  cd /
+  245  lvdisplay
+  246  sudo lvdisplay
+  247  cd tmp/
+  248  ls
+  249  cat lv-original 
+  250  head lv-original 
+  251  tail -f lv-original 
+  252  cat lv-original 
+  253  cd /
+  254  clear
+  255  ls
+  256  cd media/
+  257  ls
+  258  pwd
+  259  ls -l
+  260  clear
+  261  cd ..
+  262  ls
+  263  cd dev/
+  264  ls
+  265  cd /
+  266  ls dev/sd*
+  267  ls dev/v*
+  268  shutdown -l now
+  269  shutdown -h now
+  270  clear
+  271  sudo fdisk -l
+  272  shutdown -h now
+  273  clear
+  274  sudo fdisk -l
+  275  clear
+  276  sudo fdisk -l
+  277  fdisk /dev/sdb
+  278  sudo fdisk /dev/sdb
+  279  fdisk -l
+  280  sudo fdisk -l
+  281  history
+  282  pvdisplay
+  283  sudo pvdisplay
+  284  sudo vgdisplay
+  285  sudo lvdisplay
+  286  vim lvdisplay
+  287  clear
+  288  init
+  289  man init
+  290  clear
+  291  history
+  292  sudo pvdisplay
+  293  sudo vgdisplay
+  294  sudo lvdisplay
+  295  sudo fdisk -l
+  296  sudo vgdisplay
+  297  cd /
+  298  cd tmp/
+  299  ls
+  300  vim lv-original 
+  301  ls
+  302  vim pv-original 
+  303  sudo lvdisplay
+  304  vim pv-original 
+  305  clear
+  306  sudo fdisk -l
+  307  cd /
+  308  history
+  309  vgdisplay
+  310  sudo vgdisplay
+  311  shutdown -h now
+  312  clear
+  313  lvdisplay
+  314  sudo lvdisplat
+  315  sudo lvdisplay
+  316  sudo vgextend centos /dev/sdb
+  317  sudo vgdisplay
+  318  cd /
+  319  cd tmp/
+  320  cat vg-original 
+  321  pvs
+  322  sudo pvs
+  323  sudo vgs
+  324  sudo lvs
+  325  sudo fdisk -l /dev/sdb
+  326  sudo vgs
+  327  sudo lvdisplay
+  328  sudo vgdisplay
+  329  sudo vldisplay
+  330  sudo lvdisplay
+  331  sudo vgdisplay
+  332  sudo lvdisplay
+  333  df -h
+  334  history
+  335  sudo pvscan
+  336  man lvextend
+  337  clear
+  338  sudo lvdisplay
+  339  sudo vgdisplay
+  340  cd /
+  341  lvextend -L +200M /dev/centos/swap 
+  342  sudo lvextend -L +200M /dev/centos/swap 
+  343  sudo lvdisplay
+  344  sudo lvextend -L +512M /dev/centos/root
+  345  sudo lvdisplay
+  346  sudo fdisk -l
+  347  sudo vgdisplay
+  348  sudo lvdisplay
+  349  sudo pvdisplay
+  350  -sL /dev/sdb
+  351  file -sL /dev/sdb
+  352  sudo file -sL /dev/sdb
+  353  sudo file -sL /dev/sda
+  354  sudo lvdisplay
+  355  sudo resize2fs /dev/centos/swap 
+  356  sudo resize2fs /dev/centos/root
+  357  sudo resize2fs /dev/sdb
+  358  sudo resize2fs /dev/centos/
+  359  sudo resize2fs /dev/centos
+  360  sudo resize2fs /dev/sdb
+  361  sudo shutdown -h now
+  362  clear
+  363  sudo resize2fs /dev/sdb
+  364  sudo resize2fs /dev/centos/swap
+  365  sudo resize2fs /dev/centos/root
+  366  sudo resize2fs /dev/centos
+  367  cd /
+  368  cd dev/
+  369  ls
+  370  cd mapper/
+  371  ls
+  372  cd centos-swap 
+  373  sudo resize2fs /dev/mapper/centos-swap 
+  374  sudo resize2fs /dev/mapper/centos-root
+  375  clear
+  376  cd /
+  377  shutdown -h now
+  378  clear
+  379  sudo vgdisplay
+  380  cd /
+  381  cat /tmp/vg-original 
+  382  clear
+  383  cat /tmp/vg-original 
+  384  clear
+  385  sudo vgdisplay
+  386  clear
+  387  cd 
+  388  cd /
+  389  clear
+  390  vi /etc/fstab 
+  391  clear
+  392  sudo resize2fs /dev/centos/swap
+  393  sudo resize2fs /dev/centos/root
+  394  sudo resize2fs /dev/centos
+  395  sudo resize2fs /dev/mapper/centos-root
+  396  sudo resize2fs /dev/mapper/centos-swap
+  397  clear
+  398  sudo lvdisplay
+  399  sudo resize2fs swap
+  400  sudo resize2fs centos
+  401  cd dev/
+  402  ls
+  403  cd centos/
+  404  ls
+  405  cd root 
+  406  ls -l
+  407  clear
+  408  cd /
+  409  clear
+  410  cd home/
+  411  ls
+  412  cd sysadmin/
+  413  ls
+  414  clear
+  415  git
+  416  clear
+  417  sudo apt-get install git
+  418  clear
+  419  cd /
+  420  mkfs.ext4 /dev/mapper/centos-rot
+  421  mkfs.ext4 /dev/mapper/centos-root
+  422  mkfs.ext4 /dev/mapper/centos-swap
+  423  clear
+  424  mkfs.ext4 /dev/centos/root
+  425  mkfs.ext4 /dev/centos/swap
+  426  clear
+  427  mount /dev/centos/swap
+  428  sudo mount /dev/centos/sdb
+  429  sudo mount /dev/sdb
+  430  sudo mount /dev/mapper/centos-root 
+  431  sudo mount /dev/mapper/centos-swap 
+  432  sudo mount /dev/mapper/centos-swap
+  433  clear
+  434  cd home/
+  435  cd /
+  436  cd /home/sysadmin/
+  437  clear
+  438  git man
+  439  man git
+  440  clear
+  441  git status
+  442  clear
+  443  sudo apt-get install git
+  444  clear
+  445  yum install git
+  446  sudo yum install git
+  447  clear
+  448  git init
+  449  ls
+  450  cd /home/sysadmin/
+  451  ls
+  452  ls -a
+  453  pwd
+  454  rm .git
+  455  cd .git
+  456  ls
+  457  cd ..
+  458  rm -r .git
+  459  l
+  460  ks
+  461  ls
+  462  ls -a
+  463  clear
+  464  ip -4 addr
+  465  shutdown -h now
+  466  clear
+  467  cd /home/sysadmin/LXS2_paulo/
+  468  tree
+  469  cd Proyectos/Proyecto-1/doc/
+  470  history > historialCentOS7Proyecto.txt
