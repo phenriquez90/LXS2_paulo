@@ -45,7 +45,7 @@ fi 2> errorIf.log
 
 for k in `find $GRAF_DATA -name "*.dat"`
 do
-	sed '1d' $k >> $FULL_DATA/full.data
+	sed '1d' $k >> $FULL_DATA/full.dat
 	echo "Procesando archivo $k"
 done 2> error3.log
 
@@ -62,13 +62,14 @@ DATA_DONE=$FULL_DATA/full.dat
 ## todos los datos. Ver fig.png donde aparecen todos los datos y en fig.png
 ## solo aparecen los datos del 6 de febrero como lo establecen las variables.
 
+echo $DATA_DONE
 
 graficar()
 {
 	gnuplot << EOF 2> error.log
 	set xdata time
-	set timefmt "%Y%m%d%H%M"
-#	set xrange ["$FMT_BEGIN" : "$FMT_END"]
+	set timefmt "%Y%m%d %H%M"
+	set xrange ["$FMT_BEGIN" : "$FMT_END"]
 	set format x "$FMT_X_SHOW"
 	set terminal png
 	set output 'fig1.png'
