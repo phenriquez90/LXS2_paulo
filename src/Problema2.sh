@@ -1,17 +1,92 @@
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # +++ Inicio del Script "Problema2-Consumo Agua Enero/Junio"+++
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# Script corre co bash
+# Script corre con bash
 #!/bin/bash
+
+# Num Argumentos
+ARGS=2
+
+# Valida si recibe los dos argumentos requeridos
+if [ $# -ne $ARGS ]
+then
+	echo "ERROR:"
+	echo "Por favor ingrese los parametros requeridos"
+	echo "Ejemplo: $0 <CantMeses(2-6)> <NombreServicio>"
+	exit 1
+fi
+
+# Admite minusculas con 2do parametro al script
+shopt -s nocasematch
+
+# almacena variabes con parametros del script
+MESES=$1
+ARG_SERV=$2
+
+# asigna valores a variables que pueden variar de acuerdo a las opciones seleccionadas
+# en un principio
+case "$ARG_SERV" in
+	Agua)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='3p' 	
+	;;
+	Luz)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='4p'
+	;;
+	Telefono)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='5p'
+	;;
+	Celular)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='6p'
+	;;
+	Internet)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='7p'
+	;;
+	Alquiler)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='8p'
+	;;
+	Aseo)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='9p'
+	;;
+	Cable)
+		SERVICIO=$ARG_SERV
+		echo "Servicio seleccionado: $SERVICIO"
+		NUM_SERV='10p'
+	;;
+	*)
+		echo "ERROR:"
+		echo "Servicio $2 no disponible!!!"
+		echo "Argumentos de servicios disponibles:"
+		for SRV in agua luz telefono celular internet alquiler aseo cable
+		do 
+			echo $SRV
+		done
+		exit 1
+esac
+
 
 # Declaracion de variables globales
 DATA=$PWD/hojasExcel
 CSV_DATA=$DATA/archivos_csv
 GRAF_DATA=$DATA/datos_graf
 # creacion de directorios necesarios para guardar resultados
-mkdir $CSV_DATA
-mkdir $GRAF_DATA
 
+mkdir $CSV_DATA 2> Problema2.log
+mkdir $GRAF_DATA 2> Problema2.log
+rm $PWD/Problema2.log
 
 
 m=0
@@ -23,8 +98,14 @@ v=1
 # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 for i in `find $DATA -name '*.xls'`
 do
-	XLS=$DATA/bills0"$v"_2012.xls	
-	xls2csv $XLS > $CSV_DATA/data-$m.csv
+	XLS=$DATA/bills0"$v"_2012.xls
+
+	if [ "$v" -gt "$MESES" ];
+	then
+		VAR="var"
+	else 		 	
+		xls2csv $XLS > $CSV_DATA/data-$m.csv		
+	fi
 	let v=v+1
 	let m=m+1
 done 2> error1.log
@@ -43,7 +124,7 @@ v=1
 for e in `find $CSV_DATA -name "*.csv"`
 do 
 	CSV_VAR=$CSV_DATA/data-$t.csv
-	GET_TOTAL=`cat $CSV_VAR | awk -F, "\",\""'{print $1 " " $2}' | sed '1,$ s/"//g' | cut -d' ' -f 2 | sed -n '3p'`
+	GET_TOTAL=`cat $CSV_VAR | awk -F, "\",\""'{print $1 " " $2}' | sed '1,$ s/"//g' | cut -d' ' -f 2 | sed -n $NUM_SERV`
 	VAR="$v $GET_TOTAL"
 	echo $VAR > $GRAF_DATA/graf-$m.dat
 	let v=v+1
@@ -63,7 +144,7 @@ do
 	sed '2d' $DAT >> $PWD/full.dat
 	let m=m+1
 done 2> error3.log
-
+echo "Archivo full.dat para graficar creado"
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Definicion de funcion graficar para utilizar la herramienta gnuplot
@@ -74,17 +155,19 @@ graficar()
 {
 	gnuplot << EOF 2> error4.log
 	set terminal png
-	set output 'GraficoConsumoAgua.png' 
+	set output 'GraficoVariacion$SERVICIO.png' 
 	set xlabel "Meses"
 	set autoscale
 	set ylabel "Consumo por Precio"
-	set title "Consumo Agua Enero a Junio"
+	set title "Variacion y Consumo de $SERVICIO por $MESES Meses"
 	set key reverse Left outside
 	set grid
 	set style data linespoints
-	plot "full.dat" using 1:2 title "Colones"
+	plot "full.dat" using 1:2 title "Monto"
 EOF
 }
 
 graficar
+
+echo "GraficoVariacion$SERVICIO.png generado!!!"
 
